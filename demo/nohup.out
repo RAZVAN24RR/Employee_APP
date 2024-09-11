@@ -1,0 +1,62 @@
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::       (v3.4.0-SNAPSHOT)
+
+2024-09-11T15:35:15.943+03:00  INFO 43031 --- [           main] com.yourcompany.Application              : Starting Application using Java 17.0.12 with PID 43031 (/home/razvan/Desktop/Nokia/demo/build/classes/java/main started by razvan in /home/razvan/Desktop/Nokia/demo)
+2024-09-11T15:35:15.946+03:00  INFO 43031 --- [           main] com.yourcompany.Application              : No active profile set, falling back to 1 default profile: "default"
+2024-09-11T15:35:16.363+03:00  INFO 43031 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-11T15:35:16.397+03:00  INFO 43031 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
+2024-09-11T15:35:16.739+03:00  INFO 43031 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-11T15:35:16.749+03:00  INFO 43031 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-11T15:35:16.750+03:00  INFO 43031 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-11T15:35:16.781+03:00  INFO 43031 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-11T15:35:16.782+03:00  INFO 43031 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 798 ms
+2024-09-11T15:35:16.882+03:00  INFO 43031 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-11T15:35:16.924+03:00  INFO 43031 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.0.Final
+2024-09-11T15:35:16.941+03:00  INFO 43031 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-11T15:35:17.105+03:00  INFO 43031 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-11T15:35:17.121+03:00  INFO 43031 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-11T15:35:17.326+03:00  INFO 43031 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@300bb303
+2024-09-11T15:35:17.328+03:00  INFO 43031 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-11T15:35:17.382+03:00  INFO 43031 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasourcenull]
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-09-11T15:35:17.856+03:00  INFO 43031 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-11T15:35:17.890+03:00  INFO 43031 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-11T15:35:18.042+03:00  WARN 43031 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-11T15:35:18.242+03:00  INFO 43031 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-11T15:35:18.249+03:00  INFO 43031 --- [           main] com.yourcompany.Application              : Started Application in 2.56 seconds (process running for 2.76)
+
+> Task :bootRun FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':bootRun'.
+> Process 'command '/usr/lib/jvm/java-17-openjdk-amd64/bin/java'' finished with non-zero exit value 137
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 2m 2s
+4 actionable tasks: 1 executed, 3 up-to-date
