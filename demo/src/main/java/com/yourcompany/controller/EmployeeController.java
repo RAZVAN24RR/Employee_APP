@@ -39,7 +39,16 @@ public class EmployeeController {
 
         return new ResponseEntity<>(allEmployee, HttpStatus.ACCEPTED);
     }
+    
 
+    @GetMapping("/getEmployeeById/{id}")
+    public ResponseEntity<?> getAEmployeeById(@PathVariable Long id) {
+
+        Employee employee = employeeService.getEmployeeById(id);
+
+        return new ResponseEntity<>(employee, HttpStatus.ACCEPTED);
+    }
+ 
     @DeleteMapping("/deleteEmployeeById/{id}")
     public ResponseEntity<?> deleteEmployee(@PathVariable Long id){
 

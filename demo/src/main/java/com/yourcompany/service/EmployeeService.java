@@ -3,6 +3,7 @@ package com.yourcompany.service;
 
 import com.yourcompany.model.Employee;
 import com.yourcompany.repository.EmployeeRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -23,6 +24,17 @@ public class EmployeeService {
     }
     public void deleteEmployeeById(Long id) {
         employeeRepository.deleteById(id);
+    }
+
+    public Employee getEmployeeById(Long id){
+        Optional<Employee> employeeoOptional = employeeRepository.findById(id);
+
+        if(employeeoOptional.isPresent()){
+            return employeeoOptional.get();
+        }else {
+            throw new RuntimeException("Employee not found");
+        }
+
     }
 
     public void updateEmployeeTeamNr(Long id, Integer teamNr){
