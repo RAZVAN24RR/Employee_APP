@@ -20,5 +20,7 @@ public class EmployeeService {
     public List<Employee> getAllEmployee(){
         return employeeRepository.findAll();
     }
-
+    public void deleteEmployeeById(Long id) {
+        employeeRepository.deleteById(id);
+    }
 }

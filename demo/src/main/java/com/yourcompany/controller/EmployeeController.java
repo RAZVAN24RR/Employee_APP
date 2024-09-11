@@ -33,8 +33,24 @@ public class EmployeeController {
     }
     @GetMapping("/getAllEmployee")
     public ResponseEntity<?> getAllEmployee() {
+
         List<Employee> allEmployee = employeeService.getAllEmployee();
+
         return new ResponseEntity<>(allEmployee, HttpStatus.ACCEPTED);
+    }
+
+    @DeleteMapping("/deleteEmployeeById/{id}")
+    public ResponseEntity<?> deleteEmployee(@PathVariable Long id){
+
+        try{
+
+            employeeService.deleteEmployeeById(id);
+
+            return ResponseEntity.ok("Employee deleted successfully");
+
+        }catch (Exception e){
+            return ResponseEntity.status(404).body("Employee not found");
+        }
     }
 
 }
