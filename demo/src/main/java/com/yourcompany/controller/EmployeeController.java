@@ -1,6 +1,7 @@
 package com.yourcompany.controller;
 
 import com.yourcompany.model.Employee;
+import com.yourcompany.model.UpdateTeamRequestDTO;
 import com.yourcompany.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -50,6 +51,19 @@ public class EmployeeController {
 
         }catch (Exception e){
             return ResponseEntity.status(404).body("Employee not found");
+        }
+    }
+
+    @PutMapping("/updateTeamEmployee/{id}")
+    public ResponseEntity<?> updateEmployeeTeamNr(@PathVariable Long id, @RequestBody UpdateTeamRequestDTO updateTeamRequest)
+    {
+        try{
+   
+            employeeService.updateEmployeeTeamNr(id,updateTeamRequest.getTeamNr());
+            return ResponseEntity.ok("Employee team number updated seccessfully");
+
+        }catch(Exception e){
+            return ResponseEntity.status(404).body("Employee not found or update failed");
         }
     }
 

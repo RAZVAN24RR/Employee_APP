@@ -6,6 +6,7 @@ import com.yourcompany.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EmployeeService {
@@ -23,4 +24,20 @@ public class EmployeeService {
     public void deleteEmployeeById(Long id) {
         employeeRepository.deleteById(id);
     }
+
+    public void updateEmployeeTeamNr(Long id, Integer teamNr){
+
+        Optional<Employee> employeeOptional = employeeRepository.findById(id);
+
+
+        if(employeeOptional.isPresent()){
+            Employee employee = employeeOptional.get();
+            employee.setTeamNr(teamNr);
+            employeeRepository.save(employee);
+        }else {
+            throw new RuntimeException("Employee not found");
+        }
+
+    }
+
 }
